@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+body{
+    margin: 0;
+    font-family: 'Poppins';
+    background: #13171C;
+}
+/*-- Header --*/
+
+.header{
+    display: grid;/*Usamos grid para posicionar bien nuestro menu de navegación*/
+    grid-template-columns: repeat(2,1fr);
+    height: 100px;
+    padding: 10px 20px;
+    align-items: center;
+    align-content: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.ham_menu {
+    display: none; /* Oculta la hamburguesa en escritorio */
+}
+/*---Vesión movil---*/
+@media(max-width:760px){
+    .header{
+        display: flex;/*Usamos flex para que se posicone bien nuestro menu hambuerguesa*/
+        justify-content: space-between;
+        padding: 0 10px;
+        border-bottom: none;
+    }
+    .nav-menu ul {
+        display: flex; /* Oculta el menú de escritorio en móvil */
+        flex-direction: column;
+        row-gap: 60px;
+    }
+    .ham_menu{
+        display: block; /* Muestra la hamburguesa en móvil */
+        height: 50px;
+        width: 50px;
+        position: relative;
+    }
+    
+    .ham_menu span{
+        display: block;
+        height: 4px;
+        width: 75%;
+        background:white;
+        border-radius: 25px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: .3s ease;
+    }
+    
+    .ham_menu span:nth-child(1){
+        top: 25%;
+    }
+    
+    .ham_menu span:nth-child(3){
+        top: 75%;
+    }
+    .ham_menu.active span:nth-child(1){
+        top: 50%;
+        transform: 
+                    translate(-50%, -50%)
+                    rotate(-45deg);
+    }
+    .ham_menu.active span:nth-child(2){
+        opacity: 0;
+    }
+    .ham_menu.active span:nth-child(3){
+        top:50%;
+        transform: 
+                    translate(-50%, -50%)
+                    rotate(45deg);
+    }
+    /*-- menu de navegación --*/
+    .nav-menu{
+        background: #000;
+        height: 100vh;
+        width: 100%;
+        max-width: 450px;
+        position: fixed;
+        top: 0;
+        right: -450px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        row-gap: 10px;
+        font-size: 2.5rem;
+        transition: .3s ease;
+        
+    }
+    
+    .nav-menu.active{
+        right: 0;
+    }
+    ul > li{
+        list-style: none;
+        padding-left: 50px;
+       margin-right:20px;
+    
+    }
+    li > a{
+        text-decoration: none;
+        color: white;
+    }
+}
+
+
+/*-- Versión escritorio --*/
+
+  
+    ul{
+        display: flex; 
+        justify-content: flex-end; /* Alinea los items a la derecha */
+        gap: 20px; /* Añade espacio entre los items */
+        margin: 0;
+        padding:0;
+    }
+    li{
+        list-style: none;
+    }
+    li > a {
+        text-decoration: none;
+        color: white;
+    }
+   

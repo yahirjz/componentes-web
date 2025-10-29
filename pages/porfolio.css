@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+body{
+    margin: 0;
+    font-family: 'Poppins';
+    background: #13171C;
+}
+/*--- sección mis servicios ---*/
+.porfolio__subtitle{
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    font-size: 42px;
+}
+
+.contenedor__servicios{
+    background: url(/img/doodle\ items.svg);
+    height: 100%;
+}
+/*--- contenido portafoio ---*/
+.porfolio__conten{
+    margin-top: 60px;
+    padding: 30px;
+    display: grid;
+    gap:50px;
+    background: url(/img/doodle\ items.svg);
+}
+.porfolio__card{
+    background: rgba(255, 255, 255, 0.3); 
+    border-radius: 10px;
+}
+.porfolio__img{
+    display: block;
+    margin: 25px auto 0;
+    height: 158px;
+    width: 265px;
+    border-radius: 5px;
+}
+.porfolio__card-conten{
+    padding: 25px;
+}
+.porfolio__card-title{
+    color:white;
+    font-weight: 700;
+    font-size: 33px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+.porfolio__card-description{
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+    margin: 0;
+}
+.presentacion__subtitle--alinear{
+    text-align: center;
+}
+@media(min-width:760px){
+    .porfolio__conten{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .presentacion__subtitle--alinear{
+        text-align: initial;
+        text-align: center;
+
+    }
+
+}
+
+@media(min-width:960px){
+    .porfolio__conten{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .presentacion__subtitle--alinear{
+        text-align: center;
+    }
+}

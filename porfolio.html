@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="componentes/header.css".css">
+    <link rel="stylesheet" href="componentes/footer.css">
+    <link rel="stylesheet" href="/pages/porfolio.css">
+    <link rel="stylesheet" href="pages/index.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header" id="header">
+     
+    </header>
+    <section>
+        <div class="section__title-contenedor">
+            <h1 class="title"> 
+                <span class="title__firts">Mi</span>
+                <span class="title__second">Porfolio</span>
+            </h1>
+            <div class="section__contenedor-img">
+                <img src="./img/porfolio.svg" alt="porfolio">
+                <img src="./img/Ellipse 3.svg" alt="eclipse" class="eclipse">
+            </div>
+
+        </div>
+
+    </section>
+    <!-- Seccions de servicios importados desde JS -->
+    <div class="porfolio__conten">
+    </div>
+
+    <!-- Reutilizamos el mismo template que en index.html -->
+    <template id="porfolio__card-template">
+        <div class="porfolio__card">
+            <img src="" alt="imagen" class="porfolio__img">
+            <div class="porfolio__card-conten">
+                <h3 class="porfolio__card-title"></h3>
+                <p class="porfolio__card-description"></p>
+            </div>
+        </div>
+    </template>
+
+    <div class="contenedor__footer" id="footer">
+
+    </div>
+
+    <!-- Incluimos los scripts necesarios -->
+    <script src="componentes/footer.js"></script>
+     <script src="pages/porfolio.js"></script>
+    <script src="componentes/header.js"></script>
+    <script src="pages/index.js"></script>
+   
+</body>
+</html>
